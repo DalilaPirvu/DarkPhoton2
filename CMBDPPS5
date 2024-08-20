@@ -1,0 +1,18 @@
+#!/bin/bash
+## Script for PI cluster symmetry:
+#SBATCH --partition=debugq
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=20
+#SBATCH --time=1:00:00
+#SBATCH --output=./out/slurm-%j.out
+
+#python3 ./out/script40.py >> ./out/output40.txt &
+#python3 ./out/script41.py >> ./out/output41.txt &
+#python3 ./out/script42.py >> ./out/output42.txt &
+#python3 ./out/script43.py >> ./out/output43.txt &
+python3 ./out/script44.py >> ./out/output44.txt &
+python3 ./out/script45.py >> ./out/output45.txt &
+python3 ./out/script46.py >> ./out/output46.txt &
+python3 ./out/script47.py >> ./out/output47.txt &
+wait

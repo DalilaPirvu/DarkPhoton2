@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --partition=gpuq
+#SBATCH --nodes=1
+#SBATCH --tasks=1
+#SBATCH --time=24:00:00
+#SBATCH -J rresplot
+#SBATCH --output=./out/slurm-%j.out
+###SBATCH --mail-user=dpirvu@perimeterinstitute.ca
+
+jupyter nbconvert --execute upgrades.ipynb --to 'pdf' --ExecutePreprocessor.timeout=-1
